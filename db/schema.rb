@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 2022_02_14_134242) do
     t.string "name", null: false
     t.string "email", null: false
     t.string "password_digest", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_foreign_key "messages", "users"
