@@ -24,6 +24,17 @@ module Api
     else
        render json: @message.errors, status :unproccessable_entity
     end
+
+    # DELETE message
+    def destroy
+        @message.destroy
+    end
+
+    private  
+    def message_params
+        params.require(:plaintext, :key1, :output).permit(:key2, :output2, :user_id)
+    end
+
     end
   end
 end
