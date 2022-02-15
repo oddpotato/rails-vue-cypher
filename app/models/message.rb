@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+class Message < ApplicationRecord
     belongs_to :user, foreign_key: "user_id"
-    validates :plaintext, :key1, presence :true
+    validates :plaintext, :key1, presence: true
 end
